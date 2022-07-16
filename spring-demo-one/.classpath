@@ -72,5 +72,5 @@
 	<classpathentry kind="lib" path="lib/spring-websocket-5.3.9.jar"/>
 	<classpathentry kind="lib" path="lib/spring-websocket-5.3.9-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/spring-websocket-5.3.9-sources.jar"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="output" path="bin/output_class_files"/>
 </classpath>
