@@ -17,6 +17,9 @@
     	class = "com.spring.springDemo.HappyFortuneService">
     </bean>
     
+    <bean id="myRFortune"
+    	class = "com.spring.springDemo.RandomFortuneService">
+    </bean>
     
     <bean id="myCoach"
     		class="com.spring.springDemo.TrackCoach">
@@ -29,8 +32,9 @@
     		class="com.spring.springDemo.CricketCoach">
     		
     		<!-- set setter injection -->
-    		<property name="fortuneService" ref="myFortune"/>
+    		<property name="fortuneService" ref="myRFortune"/>
     		
+    		<!-- literal injection -->
     		<property name="emailAddress" value="${email}"/>
     		<property name="team" value="${team}"/>
     </bean>
