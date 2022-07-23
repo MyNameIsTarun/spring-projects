@@ -1,8 +1,6 @@
 package com.spring.springDemo;
 
-public interface Coach {
+public interface FortuneService {
 
-	public String getDailyWorkout();
-	
 	String getDailyFortune();
 }
