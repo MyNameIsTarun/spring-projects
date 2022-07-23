@@ -8,10 +8,10 @@ public class TennisCoach implements Coach {
 	
 	private FortuneService myFortune;
 	
-	@Autowired
-	public TennisCoach(FortuneService myFortune) {
-		this.myFortune = myFortune;
-	}
+//	@Autowired
+//	public TennisCoach(FortuneService myFortune) {
+//		this.myFortune = myFortune;
+//	}
 
 	@Override
 	public String getDailyWorkout() {
@@ -23,4 +23,8 @@ public class TennisCoach implements Coach {
 		return myFortune.getDailyFortune();
 	}
 
+	@Autowired
+	public void anyMethodName(FortuneService myFortune) {
+		this.myFortune = myFortune;
+	}
 }
