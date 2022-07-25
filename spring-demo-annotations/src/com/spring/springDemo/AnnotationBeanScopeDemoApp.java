@@ -11,13 +11,7 @@ public class AnnotationBeanScopeDemoApp {
 		
 		Coach theCoach = context.getBean("footballCoach", Coach.class);
 		
-		Coach alphaCoach = context.getBean("footballCoach", Coach.class);
-		
-		System.out.println("Pointing to same object: "+(theCoach == alphaCoach));
-		
-		System.out.println("Memory location of theCoach: "+theCoach);
-		
-		System.out.println("Memory location of alphaCoach: "+alphaCoach);
+		System.out.println(theCoach.getDailyFortune());
 		
 		context.close();
 	}

@@ -1,12 +1,14 @@
 package com.spring.springDemo;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
 public class FootballCoach implements Coach {
 	
 	@Autowired
@@ -23,9 +25,19 @@ public class FootballCoach implements Coach {
 		return myFortune.getDailyFortune();
 	}
 	
-//	@Autowired
-	public void setFortuneService(FortuneService myFortune) {
-		this.myFortune = myFortune;
+	@PostConstruct
+	public void startupStuff() {
+		System.out.println("Inside startupStuff()");
 	}
+	
+	@PreDestroy
+	public void cleanupStuff() {
+		System.out.println("Inside cleanupStuff()");
+	}
+	
+//	@Autowired
+//	public void setFortuneService(FortuneService myFortune) {
+//		this.myFortune = myFortune;
+//	}
 
 }
