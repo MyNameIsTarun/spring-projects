@@ -8,7 +8,7 @@ public class BasketballCoachConfigDemoApp {
 		
 		// read the Spring Java config file
 		AnnotationConfigApplicationContext context = 
-				new AnnotationConfigApplicationContext(SportConfig.class);
+				new AnnotationConfigApplicationContext(BasketballCoachJavaConfig.class);
 		
 		// get the bean from the Spring container
 		BasketballCoach theCoach = context.getBean("basketballCoach", BasketballCoach.class);
