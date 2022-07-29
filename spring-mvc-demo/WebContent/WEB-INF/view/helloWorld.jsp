@@ -2,8 +2,13 @@
 <html>
 <body>
 Hello World of Spring.
-<br/>
 
-Student Name: ${param.StudentName}
+<br/><br/>
+
+Student Name: ${param.studentName}
+
+<br/><br/>
+
+Message: ${message}
 </body>
 </html>
