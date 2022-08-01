@@ -20,12 +20,21 @@
 			
 			Country: 
 			<form:select path="country">
-				<form:option value="India" label="India" />
-				<form:option value="Germany" label="Germany" />
-				<form:option value="Brazil" label="Brazil" />
-				<form:option value="USA" label="USA" />
-				<form:option value="Russia" label="Russia" />
+				<form:options items="${student.countryOptions}" />
 			</form:select>
+			
+			<br><br>
+			
+			Favorite Programming Language: <br>
+			Java: <form:radiobutton path="favoriteLanguage" value="Java"/>
+			Python: <form:radiobutton path="favoriteLanguage" value="Python"/>
+			Javascript: <form:radiobutton path="favoriteLanguage" value="Javascript"/>
+			C++: <form:radiobutton path="favoriteLanguage" value="C++"/>
+			
+			<br><br>
+			
+			Operating Systems: <br>
+			<form:checkboxes items="${student.operatingSystems}" path="os"/>
 			
 			<br><br>
 			
