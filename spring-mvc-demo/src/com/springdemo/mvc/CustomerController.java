@@ -15,11 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/customer")
 public class CustomerController {
 	
-	// remove whitespaces from start and end of string
+	// remove white spaces from start and end of input string
 	// It's a preprocessor which processes web requests before reaching to controller
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
-		System.out.println("is working");
 		StringTrimmerEditor trimmerBinder = new StringTrimmerEditor(true);
 		binder.registerCustomEditor(String.class, trimmerBinder);
 	}
