@@ -21,13 +21,16 @@ public class DeleteInstructorDetailDemo {
 		try {
 			session.beginTransaction();
 			
-			InstructorDetail theInstructorDetail = session.get(InstructorDetail.class, 1);
+			InstructorDetail theInstructorDetail = session.get(InstructorDetail.class, 3);
 			
 			System.out.println(theInstructorDetail);
 			
 			System.out.println("\nAssociated Instructor: "+ theInstructorDetail.getInstructor());
 			
 			System.out.println("\nDeleting Instructor detail: ");
+			
+			// break bi-directional link first
+			theInstructorDetail.getInstructor().setInstructorDetail(null);
 			
 			session.delete(theInstructorDetail);
 			
